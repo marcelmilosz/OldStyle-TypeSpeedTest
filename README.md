@@ -8,4 +8,4 @@ How was it?
 
 --- There are some problem with mobile responsiveness but works fine on PC. Will try to fix it later
 
-![Uploading website.png…]()
+<img width="1298" alt="Zrzut ekranu 2022-07-18 o 15 13 30" src="https://user-images.githubusercontent.com/61027817/179518987-2c4a37bd-571f-4e19-bcde-8c8e85c41abe.png">
