@@ -13,9 +13,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;900&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
 
+    <!-- 
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    -->
 
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="app.css">
     <link rel="icon" type="image/x-icon" href="..//images/keyboard.png">
     <title> Speed test </title>
@@ -26,6 +32,10 @@
 <body onload="onLoad()">
 
     <div class="main-box">
+
+        <div class="paperBg">
+            
+        </div>
 
         <div class="container cont">
 
@@ -67,7 +77,10 @@
 
                         <!-- Type box -->
                         <div class="col-12 type-box"> 
-                            <input id="change" type="text" placeholder="Type here!">    
+                            <input class="typeHereBtn" id="change" type="text" placeholder="Type here!">
+                            <div class="wr">
+                                <input class="stopBtn" id="" type="button" value="Stop" onclick="stopBtnClicked()"> <input class="resetBtn" id="" type="button" value="Reset" onclick="resetBtnClicked()"> 
+                            </div>  
                         </div>
 
                     </div>

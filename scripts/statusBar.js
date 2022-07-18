@@ -1,5 +1,5 @@
 
-const maxWords = 70;
+const maxWords = 50;
 
 let seconds = 1;
 let wmin = 0;
@@ -107578,28 +107578,20 @@ var words = [
   ]
 
 function onLoad() {
-    
-    console.log("@start");
 
     generateStartingText();
 
 
 }
 
-function getStatusBar() {
-
+function finish() {
+    stopBtnClicked();
 }
 
-function firstLetterTyped() {
-
-}
 
 // Highlighting current text
 function updateText(txt) {
-    //txt is a current value from input 
-    if(typedAll == false) {
-        
-    }
+
 
     // When space typed we check if word is written correctly
     if (txt[txt.length - 1] == " ") {
@@ -107608,18 +107600,27 @@ function updateText(txt) {
         document.getElementById("change").value = "";
 
         wordBefore = document.getElementById("t" + (currentWordIndex - 1));
-        wordCurrent = document.getElementById("t" + currentWordIndex);
+
+        if (currentWordIndex < maxWords) {
+            wordCurrent = document.getElementById("t" + currentWordIndex);
+        }
+        else {
+            finish();
+        }
 
         wordBefore.classList.remove("current");
 
+        inputedText = txt.substring(0, txt.length-1);
+
         // IF word was written correctly or nah
-        if (txt == wordBefore.innerHTML) {
+        if (inputedText == wordBefore.innerHTML) {
             wordBefore.classList.add("tSuccess");
 
             correctWords += 1;
 
             chars += wordBefore.innerHTML.length;
             document.getElementById("cmin").innerHTML = formatValue(chars);
+            
         }
         else {
             wrongWords += 1;
@@ -107666,7 +107667,7 @@ function generateStartingText() {
 
     for(let i = 0; i < array.length; i++) {
         // console.log(array[i]);
-        finalString += "<span id=t" + i + ">" + array[i] + " </span>";
+        finalString += "<span id=t" + i + ">" + array[i] + "</span> ";
 
     }
 
@@ -107705,4 +107706,39 @@ function updateTimer() {
     document.getElementById("seconds").innerHTML = formatValue(seconds);
     seconds += 1;
     
+}
+
+function stopBtnClicked() {
+    clearInterval(timer);
+    document.getElementById("change").disabled = true;
+}
+
+function resetBtnClicked() {
+    clearInterval(timer);
+    document.getElementById("change").disabled = false;
+
+    seconds = 1;
+    wmin = 0;
+    cmin = 0;
+    acc = 0;
+
+    currentWordIndex = 0;
+    typedAll = false;
+
+    // Status bar
+    correctWords = 0;
+    wrongWords = 0;
+    correctWordsPMin = 0;
+    chars = 0;
+    accuracy = 0;
+    firstTimeTyped = false;
+
+    document.getElementById("seconds").innerHTML = "00";
+    document.getElementById("wmin").innerHTML = "00";
+    document.getElementById("cmin").innerHTML = "00";
+    document.getElementById("acc").innerHTML = "00";
+
+    generateStartingText();
+
+
 }
