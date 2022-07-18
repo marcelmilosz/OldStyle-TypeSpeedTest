@@ -47,36 +47,21 @@ table {
 html, body {
     width: 100%;
     height: 100%;
-    background-color: #fff;
 	font-family: 'Montserrat', sans-serif;
-}
-
-.paperBg {
-	width: 100%;
-	height: 100%;
-	background: url("images/bg.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	opacity: 0.4;
-	z-index: 10;
 }
 
 .main-box {
 	width: 100%;
 	height: 100%;
 
-	background-color: rgb(218, 153, 103);
+	background-color: #FFF;
 	color: #2e2a26;
 }
 
+
 .cont {
 	background-color: transparent;
-
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+	min-height: 100%;
 }
 
 .coolBorder {
@@ -87,19 +72,21 @@ html, body {
 .title-box {
 	width: 100%;
 	height: 100px;
-	margin-bottom: 50px;
-	font-size: 86px;
+	font-size: 72px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding-left: 10px;
-	font-weight: 400;
+	font-weight: 700;
 	letter-spacing: 3px;
+	padding: 20px;
+	margin-bottom: 60px;
+
+	padding-top: 200px
 }
 
 .timer-box{
 	height: 150px;
-	margin-bottom: 20px;
 
 	padding: 10px;
 
@@ -113,12 +100,9 @@ html, body {
 
 .timer-box div {
 	flex-grow: 1;
-
-	margin-right: 10px;
 	padding: 20px;
 	text-align: center;
 	line-height: 1;
-	border-bottom: 2px solid #2e2a26;
 }
 
 .timer-box div:nth-child(4) {
@@ -151,6 +135,7 @@ html, body {
 	height: 100px;
 
 	padding: 20px;
+	margin-bottom: 100px;
 }
 
 .typeHereBtn {
@@ -176,11 +161,12 @@ html, body {
 	height: 100%;
 	
 	margin-top: 20px;
-
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+
+	z-index: 2;
 
 }
 
@@ -193,7 +179,7 @@ html, body {
 
 .stopBtn, .resetBtn {
 	width: 120px;
-	height: 3vh;
+	height: 60px;
 
 	font-size: 30px;
 	text-transform: uppercase;
@@ -228,8 +214,8 @@ html, body {
 }
 
 .current {
-	color: #ffffff;
-	font-weight: 400;
+	color: #111;
+	font-weight: 600;
 
 	animation-name: currentText;
   	animation-duration: 0.2s;
@@ -237,7 +223,7 @@ html, body {
 }
 
 .tSuccess {
-	color: rgb(169, 255, 103);
+	color: rgb(28, 194, 80);
 }
 
 .tWrong {
