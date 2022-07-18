@@ -8,6 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="app.css">
     <link rel="icon" type="image/x-icon" href="..//images/keyboard.png">
     <title> Speed test </title>
@@ -17,7 +25,70 @@
 
 <body>
 
+    <div class="main-box">
 
+        <div class="container cont">
+
+            <div class="row">
+
+                <div class="col-12">
+
+                    <div class="row">
+
+                        <div class="title-box">
+                            <h1> Track your type speed</h1>
+                        </div>
+
+                        <div class="col-12 timer-box"> 
+
+                            <div> 
+                                <p class="upperText"> 00 </p>
+                                <p id="seconds" class="lowerText"> seconds </p>
+                            </div>
+                            <div> 
+                                <p class="upperText"> 00 </p>
+                                <p id="wmin" class="lowerText"> words / min </p>
+                            </div>
+                            <div> 
+                                <p class="upperText"> 00 </p>
+                                <p id="cmin" class="lowerText"> chars / min </p>
+                            </div>
+                            <div> 
+                                <p class="upperText"> 00 </p>
+                                <p id="acc" class="lowerText"> % accuracy </p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 text-box"> 
+                            <p class="text"> 
+                                Proin ullamcorper mattis nulla ac maximus. Morbi maximus tortor sapien. Donec ultrices viverra ante, at ultrices dolor efficitur in. Fusce sed nibh neque. Morbi non velit neque. Curabitur facilisis quis augue ut sollicitudin. Aenean id mauris eget turpis dapibus rhoncus sit amet sed erat. Etiam dictum aliquet vehicula. Aliquam ipsum elit, accumsan in mi non, mollis blandit erat. Curabitur turpis ante, tincidunt vel ipsum et, molestie rhoncus enim. Quisque fermentum volutpat elit, mattis sagittis purus eleifend vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas mattis lectus ut sollicitudin eleifend.
+
+                                Donec ut sagittis mi, vitae molestie elit. Nunc laoreet tempor nunc, non interdum erat dignissim sed. Quisque et quam nec metus congue lobortis et eget dolor. Vivamus ac ex nunc. Pellentesque interdum augue a posuere convallis. Vivamus vitae massa nunc. Curabitur sed sapien massa. Mauris sit amet leo justo. Aenean dolor nibh, pharetra vehicula viverra sed, dapibus at orci. Maecenas sit amet luctus metus. Vivamus non turpis vitae tellus vulputate ornare. Suspendisse tempus mi ante, vitae lacinia odio elementum eget.
+
+                                Aliquam erat volutpat. Mauris eget elit nec ex placerat rhoncus. Nulla facilisi. Mauris vel mi malesuada, laoreet erat quis, feugiat diam. Nullam elementum ligula eget felis venenatis sagittis. Phasellus luctus ornare leo ac bibendum. Curabitur quis dapibus nibh. Integer tempor erat eu ante gravida feugiat. Vivamus sagittis placerat eros a eleifend. Donec mi velit, ullamcorper eu urna id, feugiat dictum tellus. Duis ultricies lorem a purus eleifend, sed rhoncus massa rhoncus.
+
+                            </p>
+                        </div>
+
+                        <!-- Type box -->
+                        <div class="col-12 type-box"> 
+                            <input type="text" placeholder="Type here!">    
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript" src="scripts/statusBar.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
